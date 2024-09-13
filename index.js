@@ -14,11 +14,13 @@ const port = 3000;
 
 app.get('/',(req,res)=>{
   res.send(`
-  <div style="display:flex;align-item:center; justify-content:center; background:black; color:white;">
-    <h1>Chat App</h1>
+  <div style="display:flex;align-item:center; height:100vh; width:100%; justify-content:center; background:black; color:white;">
+   <div>
+     <h1>Chat App</h1>
     <p>Welcome to Server</p>
+   </div>
 
-  </div>`)
+  </div>`);
 })
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoute);
