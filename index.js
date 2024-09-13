@@ -12,6 +12,14 @@ const app = express();
 app.use(express.json());
 const port = 3000;
 
+app.get('/',(req,res)=>{
+  res.send(
+  <div style="display:flex;align-item:center; justify-content:center; background:black; color:white;">
+    <h1>Chat App</h1>
+    <p>Welcome to Server</p>
+
+  </div>)
+})
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoute);
 
